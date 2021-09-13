@@ -23,7 +23,13 @@ class Calculator {
   }
 
   chooseOperation(operation) {
-
+    if (this.currentOperand === '') return
+    if (this.previousOperand !== '') {
+      this.compute
+    }
+    this.operation = operation
+    this.previousOperand = this.currentOperand
+    this.currentOperand = ''
   }
 
   compute() {
@@ -33,6 +39,7 @@ class Calculator {
   updateDisplay() {
     // console.log('e:',this.currentOperand);
     this.currentOperandTextElement.innerText = this.currentOperand
+    this.previousOperandTextElement.innerText = this.previousOperand
     // console.log('f:');
   }
 }
@@ -57,6 +64,15 @@ numberButtons.forEach(button => {
     // console.log('d:');
     calculator.updateDisplay()
     // console.log('g:');
+  })
+})
 
+operationButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // console.log('a:',button.innerText);
+    calculator.chooseOperation(button.innerText)
+    // console.log('d:');
+    calculator.updateDisplay()
+    // console.log('g:');
   })
 })
