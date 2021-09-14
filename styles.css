@@ -35,7 +35,7 @@ background: linear-gradient(to right, #FF0000, #00FF00, #0000FF);
   font-weight: bold;
 }
 
-.output {
+.screen {
   grid-column: 1 / -1;
   background-color: rgba(0,0,0, .85);
   display: flex;
@@ -47,12 +47,12 @@ background: linear-gradient(to right, #FF0000, #00FF00, #0000FF);
   word-break: break-all;
 }
 
-.output .previous-operand {
+.screen .prevOp {
   color: rgba(255,255,255, .75);
   font-size: 1.25rem;
 }
 
-.output .current-operand {
+.output .currOp {
   color: white;
   font-size: 1.75rem;
 }
