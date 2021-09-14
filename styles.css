@@ -32,7 +32,6 @@ background: linear-gradient(to right, #FF0000, #00FF00, #0000FF);
 
 .span-two {
   grid-column: span 2;
-  font-weight: bold;
 }
 
 .screen {
@@ -55,4 +54,8 @@ background: linear-gradient(to right, #FF0000, #00FF00, #0000FF);
 .screen .screenCurr {
   color: white;
   font-size: 1.75rem;
+}
+
+.number {
+  font-weight: bold;
 }
