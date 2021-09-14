@@ -69,8 +69,8 @@ class Calculator {
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
 //get calculator items from the web page
-const numberButtons = document.querySelectorAll('[data-number]')
-const operationButtons = document.querySelectorAll('[data-operation]')
+const btnNums = document.querySelectorAll('[dataNum]')
+const operationButtons = document.querySelectorAll('[dataOp]')
 const equalsButton = document.querySelector('[data-equals]')
 const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
@@ -79,9 +79,9 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 
 
 //Handle number buttons from the web page
-numberButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    calculator.appendNumber(button.innerText)
+btnNums.forEach(btn => {
+  btn.addEventListener('click', () => {
+    calculator.appendNumber(btn.innerText)
     calculator.updateDisplay()
   })
 })
